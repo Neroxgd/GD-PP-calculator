@@ -6,10 +6,17 @@ public class DemonLvl : MonoBehaviour
     [SerializeField] private NormalLvlPP normalLvlPP;
     [SerializeField] private TextMeshProUGUI demonCountUI;
     [SerializeField] private GameObject panelSpecify;
-    public void SetSpecify() { demonCountUI.text = "Specified"; }
     [SerializeField] private NormalLvl low, mid, high;
     private int _demonCount = 0;
     private int PPad = 0;
+
+
+    public void SetSpecify()
+    {
+        _demonCount = 0;
+        demonCountUI.text = "Specified";
+        normalLvlPP._NormalLvlpp -= PPad;
+    }
 
     public void Plus(int PP)
     {

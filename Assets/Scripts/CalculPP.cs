@@ -3,7 +3,7 @@ using TMPro;
 
 public class CalculPP : MonoBehaviour
 {
-    [SerializeField] private NormalLvlPP normalLvlPP, demonLvlPP;
+    [SerializeField] private NormalLvlPP normalLvlPP, demonLvlPP, extremeLvlPP;
     [SerializeField] private GameObject panelCalcul;
     private float tlerp = 0;
     [SerializeField] private AnimationCurve curve;
@@ -26,7 +26,7 @@ public class CalculPP : MonoBehaviour
     {
         if (!calcul) return;
         tlerp += 0.1f * Time.deltaTime;
-        PP = Mathf.RoundToInt(Mathf.Lerp(0, normalLvlPP._NormalLvlpp + demonLvlPP._NormalLvlpp, curve.Evaluate(tlerp)));
+        PP = Mathf.RoundToInt(Mathf.Lerp(0, normalLvlPP._NormalLvlpp + demonLvlPP._NormalLvlpp + extremeLvlPP._NormalLvlpp, curve.Evaluate(tlerp)));
         PPUI.text = PP.ToString();
         if (tlerp >= 1)
         {
