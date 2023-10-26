@@ -5,7 +5,6 @@ public class DemonLvl : MonoBehaviour
 {
     [SerializeField] private NormalLvlPP normalLvlPP;
     [SerializeField] private TextMeshProUGUI demonCountUI;
-    [SerializeField] private GameObject panelSpecify;
     [SerializeField] private NormalLvl low, mid, high;
     private int _demonCount = 0;
     private int PPad = 0;
@@ -39,10 +38,5 @@ public class DemonLvl : MonoBehaviour
         _demonCount = 0;
         demonCountUI.text = "0";
         low.ResetNB(); mid.ResetNB(); high.ResetNB();
-    }
-
-    public void OpenSpecify()
-    {
-        panelSpecify.SetActive(!panelSpecify.activeInHierarchy);
     }
 }

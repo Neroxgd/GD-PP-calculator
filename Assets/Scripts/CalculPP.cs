@@ -4,7 +4,6 @@ using TMPro;
 public class CalculPP : MonoBehaviour
 {
     [SerializeField] private NormalLvlPP normalLvlPP, demonLvlPP, extremeLvlPP;
-    [SerializeField] private GameObject panelCalcul;
     private float tlerp = 0;
     [SerializeField] private AnimationCurve curve;
     private int PP = 0;
@@ -14,12 +13,6 @@ public class CalculPP : MonoBehaviour
     public void CalculPoints()
     {   
         calcul = true;
-        panelCalcul.SetActive(true);
-    }
-
-    public void ClosePanelCalcul()
-    {
-        panelCalcul.SetActive(false);
     }
 
     void Update()
